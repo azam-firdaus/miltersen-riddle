@@ -13,6 +13,6 @@
 
 File _index.rb_ akan menggunakan penyelesaian paling optimum bagi masalah ini, dengan harapan ianya dapat membuktikan penyelesaian ini mempunyai 30% keberangkalian masalah ini berjaya diselesaikan.
 
-Cara _brute force_ untuk menyelesaikan masalah ini akan disiarkan di kemudian masa.
-a
+File _brute.rb_ pula menyediakan penyelesaian dengan cara brute force, iaitu semua banduan membuka kotak secara rawak tanpa perancangan
+
 Saya akan cuba menyelesaikan masalah ini menggunakan language Ruby
