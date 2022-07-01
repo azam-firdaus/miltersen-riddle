@@ -13,7 +13,7 @@ def loop_find(kotak)
     kotak_awal = kotak[x]
     current_kotak = kotak_awal 
     kotak_cari = x
-    bilangan_loop = 0
+    bilangan_loop = 1
 
     puts "-----------------------------"
     puts "current_banduan \t: #{current_banduan}"
@@ -23,6 +23,7 @@ def loop_find(kotak)
 
     puts "\n###################################\n"
     puts "kotak \t:#{x} =>  nombor \t:#{kotak_awal}"
+    puts "Chain \t:#{bilangan_loop}"    
     puts "\n###################################\n"
     
     while bilangan_loop <= 100  and kotak_cari != kotak_awal
@@ -30,23 +31,32 @@ def loop_find(kotak)
         current_kotak = kotak_awal
         kotak_awal = kotak[current_kotak]
 
-        # current_kotak = kotak.fetch(kotak_awal)
         bilangan_loop = bilangan_loop + 1;
 
-        puts "\n###################################\n"
         puts "kotak \t:#{current_kotak} =>  nombor \t:#{kotak_awal}"
+        puts "Chain \t:#{bilangan_loop}"
         puts "\n###################################\n"
     end
 
     puts "\n\n bilangan loop untuk banduan #{x} \t: #{bilangan_loop}" 
 
-    (0..(kotak.size()-1)).each do |x|
-        current_banduan = x
-        kotak_awal = kotak[x]
-        current_kotak = kotak_awal 
-        kotak_cari = x
-        bilangan_loop = 0
-    end    
+    # (1..(kotak.size())).each do |x|
+
+    #     kotak_awal = kotak[x]
+    #     current_kotak = kotak_awal 
+    #     kotak_cari = x
+    #     bilangan_loop = 1
+
+    #     while bilangan_loop <= 100  and kotak_cari != kotak_awal
+
+    #         current_kotak = kotak_awal
+    #         kotak_awal = kotak[current_kotak]
+    #         bilangan_loop = bilangan_loop + 1;
+    #     end
+        
+    #     puts "\n Bilangan loop untuk banduan #{x} \t: #{bilangan_loop}"
+
+    # end    
 end
 
 
@@ -89,8 +99,8 @@ bilik2 = {
 }
 
 
-loop_find(bilik)
-# puts loop_find(bilik2)
+# loop_find(bilik)
+loop_find(bilik2)
 
 
 
