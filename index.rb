@@ -1,5 +1,3 @@
-require 'pry'   
-
 def generate_array(x)
     # 'to_a' untuk tukarkan ke array
     prime_limit = (1..x).to_a

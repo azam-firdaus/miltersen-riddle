@@ -11,4 +11,8 @@
 - Setiap banduan perlu meninggalkan bilik tersebut dan menetapkan semula setiap kotak sepertimana ketika banduan masuk bilik
 - Jika semua banduan menjumpai nombor sendiri, semua banduan akan dibebbaskan. Jika walaupun seorang banduan tidak menjumpai nombor sendiri, semua banduan tidak akan dibebaskan.
 
+File _index.rb_ akan menggunakan penyelesaian paling optimum bagi masalah ini, dengan harapan ianya dapat membuktikan penyelesaian ini mempunyai 30% keberangkalian masalah ini berjaya diselesaikan.
+
+Cara _brute force_ untuk menyelesaikan masalah ini akan disiarkan di kemudian masa.
+a
 Saya akan cuba menyelesaikan masalah ini menggunakan language Ruby
