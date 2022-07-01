@@ -1,10 +1,10 @@
 def generate_array(x)
     # 'to_a' untuk tukarkan ke array
-    prime_limit = (1..x).to_a
-    return prime_limit
+    array_limit = (1..x).to_a
+    return array_limit
 end
 
-def loop_find(kotak)
+def loop_find(kotak, bil_banduan)
 
     x = 1
     current_banduan = x
@@ -24,7 +24,7 @@ def loop_find(kotak)
     puts "Chain \t:#{bilangan_loop}"    
     puts "\n###################################\n"
     
-    while bilangan_loop <= 100  and kotak_cari != kotak_awal
+    while bilangan_loop <= bil_banduan  and kotak_cari != kotak_awal
 
         current_kotak = kotak_awal
         kotak_awal = kotak[current_kotak]
@@ -96,9 +96,9 @@ bilik2 = {
 
 
 
-# loop_find(bilik)
+# loop_find(bilik, bilangan_prisoner)
 # puts bilik
-loop_find(bilik2)
+loop_find(bilik2, bilangan_prisoner)
 # puts bilik2
 
 # masukkan key/find value berdasarkan key
