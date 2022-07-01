@@ -6,6 +6,8 @@ end
 
 def loop_find(kotak, bil_banduan)
 
+    jumpa = 1
+    texttt = ""
     # x = 1
     # current_banduan = x
     # kotak_awal = kotak[x]
@@ -47,14 +49,24 @@ def loop_find(kotak, bil_banduan)
         kotak_cari = x
         bilangan_loop = 1
 
-        while bilangan_loop <= 100  and kotak_cari != kotak_awal
+        while bilangan_loop <= bil_banduan && kotak_cari != kotak_awal
             current_kotak = kotak_awal
             kotak_awal = kotak[current_kotak]
             bilangan_loop = bilangan_loop + 1;
         end
         
-        puts "Bilangan loop untuk banduan #{x} \t: #{bilangan_loop}"
+        if bilangan_loop <= bil_banduan/2
+            jumpa = jumpa + 1
+            texttt << "Bilangan loop untuk banduan #{x} \t: #{bilangan_loop} \n"
+        end
     end   
+
+    if jumpa != 0 && jumpa/bil_banduan == 1
+        puts texttt
+        return "banduan bebas"
+    else
+        return "banduan fail"
+    end
 end
 
 # TUKAR BILANGAN BANDUAN DISINI
@@ -101,8 +113,30 @@ bilik2 = {
 }
 
 
+loooop = 1
+while loop_find(bilik, bilangan_prisoner) !=  "banduan bebas"
+    loooop = loooop + 1
+    kotak = generate_array(bilangan_prisoner)
 
-loop_find(bilik, bilangan_prisoner)
+    # untuk random kan array
+    # array.shuffle
+
+    kertas = kotak.shuffle
+    bilik = Hash.new
+
+
+
+    # create pair kotak-kertas
+    (0..(bilangan_prisoner-1)).each do |k|
+        bilik[kotak[k]] = kertas[k]
+    end
+end
+
+puts "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$\nBagi banduan seramai #{bilangan_prisoner}"
+puts "Cuma 1 dalam #{loooop} percubaan yang berjaya"
+
+# puts loop_find(bilik, bilangan_prisoner)
+
 # puts bilik
 # loop_find(bilik2, bilangan_prisoner)
 # puts bilik2
