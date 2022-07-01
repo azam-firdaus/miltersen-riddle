@@ -7,21 +7,6 @@ end
 
 def find_loop(kotak, bil_banduan)
     
-    # current_banduan = 1
-
-    # jumpa = 0
-    # temp_kotak = generate_random(bil_banduan)
-
-    # temp_kotak.each do |val|
-    #     if kotak[val] == current_banduan
-    #         jumpa = jumpa + 1
-    #         print "#{temp_kotak}, "  
-    #     end
-    # end
-
-    # puts
-    # puts jumpa
-
     jumpa = 0;
     tempppepe = ""
 
@@ -51,8 +36,8 @@ end
 
 
 
-# UBAH BILANGAN PRISONER DI SINI
-bilangan_prisoner = 5
+# UBAH BILANGAN PRISONER DI SINI. HATI-HATI, SETIAP PENAMBAHAN BILANGAN, KIRAAN ADALAH LOGARITMA MASA DIAMBIL
+bilangan_prisoner = 6
 
 if bilangan_prisoner.even?
     bilangan_prisoner = bilangan_prisoner
@@ -90,4 +75,11 @@ bilik2 = {
     93=>70, 94=>17, 95=>43, 96=>98, 97=>48, 98=>60, 99=>28, 100=>30
 }
 
-puts find_loop(bilik, bilangan_prisoner)
+loooop = 1
+while find_loop(bilik, bilangan_prisoner) !=  "banduan bebas"
+    loooop = loooop + 1
+end
+
+puts "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$\nBagi banduan seramai #{bilangan_prisoner}"
+puts "Cuma 1 dalam #{loooop} percubaan yang berjaya"
+# puts find_loop(bilik, bilangan_prisoner)

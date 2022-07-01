@@ -6,58 +6,58 @@ end
 
 def loop_find(kotak, bil_banduan)
 
-    x = 1
-    current_banduan = x
-    kotak_awal = kotak[x]
-    current_kotak = kotak_awal 
-    kotak_cari = x
-    bilangan_loop = 1
+    # x = 1
+    # current_banduan = x
+    # kotak_awal = kotak[x]
+    # current_kotak = kotak_awal 
+    # kotak_cari = x
+    # bilangan_loop = 1
 
-    puts "-----------------------------"
-    puts "current_banduan \t: #{current_banduan}"
-    puts "kotak_awal \t\t: #{kotak_awal}"
-    puts "\n"
-    puts "-----------------------------"
+    # puts "-----------------------------"
+    # puts "current_banduan \t: #{current_banduan}"
+    # puts "kotak_awal \t\t: #{kotak_awal}"
+    # puts "\n"
+    # puts "-----------------------------"
 
-    puts "\n###################################\n"
-    puts "kotak \t:#{x} =>  nombor \t:#{kotak_awal}"
-    puts "Chain \t:#{bilangan_loop}"    
-    puts "\n###################################\n"
+    # puts "\n###################################\n"
+    # puts "kotak \t:#{x} =>  nombor \t:#{kotak_awal}"
+    # puts "Chain \t:#{bilangan_loop}"    
+    # puts "\n###################################\n"
     
-    while bilangan_loop <= bil_banduan  and kotak_cari != kotak_awal
+    # while bilangan_loop <= bil_banduan  and kotak_cari != kotak_awal
 
-        current_kotak = kotak_awal
-        kotak_awal = kotak[current_kotak]
+    #     current_kotak = kotak_awal
+    #     kotak_awal = kotak[current_kotak]
 
-        bilangan_loop = bilangan_loop + 1;
+    #     bilangan_loop = bilangan_loop + 1;
 
-        puts "kotak \t:#{current_kotak} =>  nombor \t:#{kotak_awal}"
-        puts "Chain \t:#{bilangan_loop}"
-        puts "###################################\n"
-    end
+    #     puts "kotak \t:#{current_kotak} =>  nombor \t:#{kotak_awal}"
+    #     puts "Chain \t:#{bilangan_loop}"
+    #     puts "###################################\n"
+    # end
 
-    puts "\n\n bilangan loop untuk banduan #{x} \t: #{bilangan_loop}" 
+    # puts "\n\n bilangan loop untuk banduan #{x} \t: #{bilangan_loop}" 
 
 
 
-    # (1..(kotak.size())).each do |x|
+    (1..(kotak.size())).each do |x|
 
-    #     kotak_awal = kotak[x]
-    #     current_kotak = kotak_awal 
-    #     kotak_cari = x
-    #     bilangan_loop = 1
+        kotak_awal = kotak[x]
+        current_kotak = kotak_awal 
+        kotak_cari = x
+        bilangan_loop = 1
 
-    #     while bilangan_loop <= 100  and kotak_cari != kotak_awal
-    #         current_kotak = kotak_awal
-    #         kotak_awal = kotak[current_kotak]
-    #         bilangan_loop = bilangan_loop + 1;
-    #     end
+        while bilangan_loop <= 100  and kotak_cari != kotak_awal
+            current_kotak = kotak_awal
+            kotak_awal = kotak[current_kotak]
+            bilangan_loop = bilangan_loop + 1;
+        end
         
-    #     puts "Bilangan loop untuk banduan #{x} \t: #{bilangan_loop}"
-    # end   
+        puts "Bilangan loop untuk banduan #{x} \t: #{bilangan_loop}"
+    end   
 end
 
-
+# TUKAR BILANGAN BANDUAN DISINI
 bilangan_prisoner = 100
 
 if bilangan_prisoner.even?
@@ -102,9 +102,9 @@ bilik2 = {
 
 
 
-# loop_find(bilik, bilangan_prisoner)
+loop_find(bilik, bilangan_prisoner)
 # puts bilik
-loop_find(bilik2, bilangan_prisoner)
+# loop_find(bilik2, bilangan_prisoner)
 # puts bilik2
 
 # masukkan key/find value berdasarkan key
