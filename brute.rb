@@ -7,36 +7,58 @@ end
 
 def find_loop(kotak, bil_banduan)
     
-    current_banduan = 1
+    # current_banduan = 1
 
-    jumpa = 0
-    temp_kotak = generate_random(bil_banduan)
+    # jumpa = 0
+    # temp_kotak = generate_random(bil_banduan)
 
-    temp_kotak.each do |val|
-        if kotak[val] == current_banduan
-            jumpa = jumpa + 1
-            print "#{temp_kotak}, "  
+    # temp_kotak.each do |val|
+    #     if kotak[val] == current_banduan
+    #         jumpa = jumpa + 1
+    #         print "#{temp_kotak}, "  
+    #     end
+    # end
+
+    # puts
+    # puts jumpa
+
+    jumpa = 0;
+    tempppepe = ""
+
+    (1..bil_banduan).each do |bandu|
+        temp_kotak = (1..bil_banduan).to_a.shuffle.take(bil_banduan/2)
+        
+        temp_kotak.each do |val|
+            if val == bandu
+                jumpa = jumpa + 1
+
+                tempppepe << "Banduan #{bandu} \n"
+                tempppepe << "Kotak yang dibuka #{temp_kotak}"
+                tempppepe << "\n\n"
+            end
         end
     end
-
-    puts
-    puts jumpa
-    
-end
-
-def generate_random(x)
-    totalt = Array.new
-    max_kotak = x/2
-
-    while totalt.size() < max_kotak
-        totalt << rand(1..x)
-        totalt.uniq
+    if jumpa != 0 && jumpa/bil_banduan == 1
+        
+        puts tempppepe
+        puts "###############"
     end
+    # puts jumpa    
 
-    return totalt
+    return jumpa != 0 && jumpa/bil_banduan == 1 ? "banduan bebas" : "banduan fail"
+
 end
 
-bilangan_prisoner = 100
+
+
+# UBAH BILANGAN PRISONER DI SINI
+bilangan_prisoner = 5
+
+if bilangan_prisoner.even?
+    bilangan_prisoner = bilangan_prisoner
+else
+    bilangan_prisoner = bilangan_prisoner + 1
+end
 
 kotak = generate_array(bilangan_prisoner)
 
@@ -68,4 +90,4 @@ bilik2 = {
     93=>70, 94=>17, 95=>43, 96=>98, 97=>48, 98=>60, 99=>28, 100=>30
 }
 
-find_loop(bilik2, bilangan_prisoner)
+puts find_loop(bilik, bilangan_prisoner)

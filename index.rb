@@ -60,6 +60,12 @@ end
 
 bilangan_prisoner = 100
 
+if bilangan_prisoner.even?
+    bilangan_prisoner = bilangan_prisoner
+else
+    bilangan_prisoner = bilangan_prisoner + 1
+end
+
 kotak = generate_array(bilangan_prisoner)
 
 # untuk random kan array
